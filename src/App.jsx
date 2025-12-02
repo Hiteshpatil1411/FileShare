@@ -1564,12 +1564,6 @@ function App() {
           </div>
         )}
 
-        <p
-          className="mt-4 mb-0 small"
-          style={{ color: "#555", lineHeight: 1.4 }}
-        >
-          Tip: Paste into Word / Docs / Notes app after copying.
-        </p>
       </div>
     </div>
   );
