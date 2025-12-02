@@ -1503,28 +1503,79 @@ function App() {
   };
 
   return (
-    <div className="min-vh-100 d-flex align-items-center justify-content-center bg-light">
-      <div className="container text-center">
-        <h1 className="mb-4">Download & Copy Page</h1>
-        <p className="mb-4">
-          Click the buttons below to download the PDF or copy the full text content.
+     <div
+      className="min-vh-100 d-flex align-items-center justify-content-center"
+      style={{
+        backgroundColor: "#050505", // very dark background
+        color: "#c8c8c8",           // low contrast text
+        fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      }}
+    >
+      <div
+        className="container text-center p-4"
+        style={{
+          maxWidth: "640px",
+          backgroundColor: "#141414",      // subtle dark card
+          borderRadius: "16px",
+          border: "1px solid #222",
+          boxShadow: "0 0 24px rgba(0,0,0,0.6)",
+        }}
+      >
+        <h1 className="h4 mb-2" style={{ color: "#ddd" }}>
+          Android Practical Helper
+        </h1>
+
+        <p className="small mb-4" style={{ color: "#888" }}>
+          Quickly download the PDF or copy all Android practical notes to clipboard.
         </p>
 
-        <div className="d-flex flex-column flex-md-row gap-3 justify-content-center mb-3">
-          <button className="btn btn-primary btn-lg" onClick={handleDownload}>
+        <div className="d-flex flex-column flex-md-row justify-content-center mb-3">
+          <button
+            type="button"
+            className="btn btn-sm mx-1 my-1"
+            onClick={handleDownload}
+            style={{
+              backgroundColor: "#252525",
+              borderColor: "#333",
+              color: "#e0e0e0",
+              minWidth: "160px",
+            }}
+          >
             Download PDF
           </button>
 
-          <button className="btn btn-outline-secondary btn-lg" onClick={handleCopy}>
-            Copy Text to Clipboard
+          <button
+            type="button"
+            className="btn btn-sm mx-1 my-1"
+            onClick={handleCopy}
+            style={{
+              backgroundColor: "#181818",
+              borderColor: "#2a2a2a",
+              color: "#d0d0d0",
+              minWidth: "160px",
+            }}
+          >
+            Copy All Notes
           </button>
         </div>
 
         {copyStatus && (
-          <div className="alert alert-info mt-3 mb-0" role="alert">
+          <div
+            className="small mt-2"
+            style={{
+              color: copyStatus.includes("Failed") ? "#ff8080" : "#8fd18f",
+            }}
+          >
             {copyStatus}
           </div>
         )}
+
+        <p
+          className="mt-4 mb-0 small"
+          style={{ color: "#555", lineHeight: 1.4 }}
+        >
+          Tip: Paste into Word / Docs / Notes app after copying.
+        </p>
       </div>
     </div>
   );
