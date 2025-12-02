@@ -1521,13 +1521,7 @@ function App() {
           boxShadow: "0 0 24px rgba(0,0,0,0.6)",
         }}
       >
-        <h1 className="h4 mb-2" style={{ color: "#ddd" }}>
-          Android Practical Helper
-        </h1>
-
-        <p className="small mb-4" style={{ color: "#888" }}>
-          Quickly download the PDF or copy all Android practical notes to clipboard.
-        </p>
+        
 
         <div className="d-flex flex-column flex-md-row justify-content-center mb-3">
           <button
